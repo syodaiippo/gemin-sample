@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todoリスト</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Todoリスト</h1>
+        <div class="todo-form-container">
+            <form id="todo-form">
+                <input type="text" id="todo-title" placeholder="タイトル (必須)" required>
+                <textarea id="todo-details" placeholder="詳細"></textarea>
+                <label for="todo-start">開始日時:</label>
+                <input type="datetime-local" id="todo-start">
+                <label for="todo-end">終了日時:</label>
+                <input type="datetime-local" id="todo-end">
+                <button type="submit">追加</button>
+            </form>
+        </div>
+        <div class="todo-controls">
+            <button id="manual-save">手動保存</button>
+            <button id="reset-all">リセット</button>
+        </div>
+        <div class="todo-board">
+            <div class="todo-column" id="waiting">
+                <h2>対応待ち</h2>
+                <div class="tasks" data-status="waiting"></div>
+            </div>
+            <div class="todo-column" id="in-progress">
+                <h2>対応中</h2>
+                <div class="tasks" data-status="in-progress"></div>
+            </div>
+            <div class="todo-column" id="done">
+                <h2>対応済み</h2>
+                <div class="tasks" data-status="done"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
