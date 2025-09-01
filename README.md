@@ -1,0 +1,3 @@
+# Gemini Sample Project
+
+これはGeminiのサンプルプロジェクトです。
